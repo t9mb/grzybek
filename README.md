@@ -1,0 +1,4 @@
+# grzybek
+pomedit
+
+przyklad komita
