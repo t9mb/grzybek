@@ -1,0 +1,39 @@
+<html lang="pl" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout"
+      th:with="title='Lista użytkowników'">
+<th:block layout:fragment="content">
+
+    <div th:if="${lista.size()}!=0" class="table-responsive">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Imie</th>
+                <th>Nazwisko</th>
+                <th>Aktywny</th>
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="user: ${lista}">
+                <td th:text="${user.id}"></td>
+                <td th:text="${user.name}"></td>
+                <td th:text="${user.lastname}"></td>
+                <td th:text="${user.isActive}"></td>
+                <td><a th:href="@{/user/show/{id}(id = ${user.id})}"
+                       class="btn btn-primary">Szczegóły</a></td>
+                <!-- <td><a th:href="@{/User/edit/{id}(id = ${User.id})}"
+                        class="btn btn-success" >EDYTUJ </a></td> -->
+                <td><a th:href="@{/user/delete/{id}(id = ${user.id})}"
+                       class="btn btn-danger">USUŃ </a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div th:if="${lista.size()}==0" style="padding-top: 30px">
+        <h1 id="actually0Users">Aktualnie brak użytkowników</h1>
+    </div>
+</th:block>
+</html>

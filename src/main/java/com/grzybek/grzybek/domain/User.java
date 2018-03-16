@@ -28,4 +28,6 @@ public class User {
     private String adress;
     private String postnumber;
     private Boolean isActive;
+
+
 }
