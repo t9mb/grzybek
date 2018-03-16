@@ -1,0 +1,18 @@
+<html lang="pl" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout" th:with="title='Szczegóły konta'">
+<th:block layout:fragment="content">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="caption-full">
+                <h4 th:text="'Imie i nazwisko :' + ${user.name} + ' ' + ${user.lastname}"></h4>
+                <h4 th:text="'Adres mail :' + ${user.email}"></h4>
+                <h4 th:text="'Adres :' + ${user.adress}"></h4>
+                <h4 th:text="'Numer pocztowy :' + ${user.postnumber}"></h4>
+                <h4 th:text="'Czy konto jest aktywowanę :' + ${user.isActive}"></h4>
+                <h4 th:text="'Typ użytkownika :' + ${user.typeUser}"></h4>
+            </div>
+        </div>
+    </div>
+</th:block>
+</html>
