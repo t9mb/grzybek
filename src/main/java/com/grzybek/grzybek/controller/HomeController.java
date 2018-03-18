@@ -16,9 +16,15 @@ public class HomeController {
         return "pages/index";
     }
 
-    @GetMapping("/errors")
+
+    @GetMapping("/login")
+    public String getLogin() {
+        return "pages/login";
+    }
+
+    /*@GetMapping("/errors")
     public String error(){
         return "pages/error";
-        }
+        }*/
     }
 
