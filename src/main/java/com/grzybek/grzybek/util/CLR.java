@@ -16,6 +16,7 @@ public class CLR implements CommandLineRunner{
     public void run(String... strings) throws Exception {
         userRepository.save(User.builder().name("Jan").lastname("Kowalski").build());
         userRepository.save(User.builder().name("Roman").lastname("Polański").build());
+        userRepository.save(User.builder().name("Michal").lastname("Fabrowski").build());
 
     }
 }

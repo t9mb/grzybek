@@ -6,8 +6,7 @@ import javax.persistence.*;
 
 
 @Entity
-@Getter
-@Setter
+@Data
 @Builder
 
 @AllArgsConstructor
@@ -27,6 +26,8 @@ public class User {
     private String phone;
     private String adress;
     private String postnumber;
+    @Enumerated(EnumType.STRING)
+    private TypeUser typeUser;
     private Boolean isActive;
 
 
