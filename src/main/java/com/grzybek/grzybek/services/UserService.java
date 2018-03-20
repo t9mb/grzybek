@@ -34,6 +34,11 @@ public class UserService {
         userRepository.save(user);
     }
 
+    public UserTO getUserById(Integer id) {
+        User user = userRepository.findOne(id);
+        return new UserTO(user);
+    }
+
 
     public void updateUser(User user) { userRepository.saveAndFlush(user); }
     private User convertToUser(UserTO userTO){
