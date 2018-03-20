@@ -1,0 +1,20 @@
+<html lang="pl" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout" th:with="title='Dodanie atrybutu'">
+<th:block layout:fragment="content">
+    <form class="form-horizontal" method="post" th:action="@{/attribute/create}" th:object="${attributeTO}" id='addAttributeForm'>
+        <div class="form-group row">
+            <label for="discription-input" class="col-lg-offset-3 col-lg-6">Właściwości</label>
+            <div class="col-lg-offset-3 col-lg-6">
+                <input class="form-control" placeholder="jadalny" th:field="*{description}" type="text" id="discription-input" />
+                <div th:if="${#fields.hasErrors('description')}"  th:errors="*{description}" class="alert alert-danger" > </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-offset-3 col-lg-6">
+                <button type="submit" class="btn btn-primary" id='sendAttributeForm'>Dodaj</button>
+            </div>
+        </div>
+    </form>
+</th:block>
+</html>

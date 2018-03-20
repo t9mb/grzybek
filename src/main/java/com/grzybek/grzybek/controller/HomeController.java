@@ -22,6 +22,6 @@ public class HomeController {
         return "pages/login";
     }
 
-
+    @GetMapping("/errors") public String error() { return "pages/error"; }
     }
 
