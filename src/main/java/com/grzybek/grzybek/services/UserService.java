@@ -28,7 +28,7 @@ public class UserService {
         String password = user.getPassword();
         user.setPassword(passwordEncoder.encode(password));
         user.setTypeUser(TypeUser.USER);
-        user.setIsActive(false);
+        user.setIsActive(true);
         userRepository.save(user);
     }
 
@@ -39,6 +39,7 @@ public class UserService {
 
 
     public void updateUser(User user) { userRepository.saveAndFlush(user); }
+
     private User convertToUser(UserTO userTO){
         return User.builder().id(userTO.getId())
                 .adress(userTO.getAdress())
