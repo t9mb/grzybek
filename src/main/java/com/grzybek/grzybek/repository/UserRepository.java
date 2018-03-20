@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
-    User findByEmail(String email);                   //select * from users where name like name;
+    User findByEmail(String email);                   //select * from users where email like email;
 }
