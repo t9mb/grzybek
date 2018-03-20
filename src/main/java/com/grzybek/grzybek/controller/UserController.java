@@ -1,5 +1,6 @@
 package com.grzybek.grzybek.controller;
 
+import com.grzybek.grzybek.domain.User;
 import com.grzybek.grzybek.dto.UserTO;
 import com.grzybek.grzybek.services.UserService;
 import lombok.AllArgsConstructor;
@@ -37,4 +38,22 @@ public class UserController {
         return "redirect:/login";
     }
 
+    @GetMapping("/edit/{id}")
+    public String editUser(@PathVariable Integer id, Model model) {
+        model.addAttribute("user", userService.getUserById(id));
+        return "pages/edituser";
+    }
+
+    @PostMapping("/edit/{id}")
+    public String editUser(@PathVariable Integer id, @ModelAttribute User user) {
+        user.setId(id);
+        userService.updateUser(user);
+        return "redirect:/user";
+    }
+
+    @GetMapping("/show/{id}")
+    public String showUser(@PathVariable Integer id, Model model) {
+        model.addAttribute("user", userService.getUserById(id));
+        return "pages/user";
+    }
 }
