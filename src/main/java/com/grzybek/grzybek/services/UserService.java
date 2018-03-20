@@ -21,16 +21,14 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public void deleteUser(Integer id) {
-        userRepository.delete(id);
-    }
+    public void deleteUser(Integer id) { userRepository.delete(id); }
 
     public void createUser(UserTO userTO){
         User user = convertToUser(userTO);
         String password = user.getPassword();
         user.setPassword(passwordEncoder.encode(password));
         user.setTypeUser(TypeUser.USER);
-        user.setIsActive(true);
+        user.setIsActive(false);
         userRepository.save(user);
     }
 
