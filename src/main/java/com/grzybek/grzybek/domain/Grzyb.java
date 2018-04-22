@@ -7,13 +7,19 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
-public class Attribute {
+public class Grzyb {
 
     @Id
     @GeneratedValue
     private Integer id;
+    private String name;
+    @Column(length = 10000)
     private String description;
+    @ManyToOne
+    private Attribute attribute;
+    @Column(length = 20000000)
+    private byte[] image;
 }

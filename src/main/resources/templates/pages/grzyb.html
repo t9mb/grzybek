@@ -1,0 +1,19 @@
+<html lang="pl" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout" th:with="title='Szczegóły grzyba'">
+<th:block layout:fragment="content">
+    <div class="row">
+        <div class="col-md-6">
+            <img class="img-responsive center" th:if="*{grzyb.image != null}"
+                 th:src="@{'data:image/jpg;base64,'+ *{grzyb.image}}"/>
+        </div>
+        <div class="col-md-6">
+            <div class="caption-full">
+                <h4 th:text="'Nazwa grzyba :' + ${grzyb.name}"></h4>
+                <h4 th:text="'Właściwości :' + ${grzyb.attribute}"></h4>
+                <p th:text="'Opis :' + ${grzyb.description}"></p>
+            </div>
+        </div>
+    </div>
+</th:block>
+</html>
