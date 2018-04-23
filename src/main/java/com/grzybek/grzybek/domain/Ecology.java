@@ -1,4 +1,7 @@
 package com.grzybek.grzybek.domain;
 
-public class Ecology {
+
+public enum Ecology {
+    GOOD, BAD
+
 }

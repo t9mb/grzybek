@@ -1,8 +1,6 @@
 package com.grzybek.grzybek.controller;
 
-public class LocalizationController {
-}
-=======
+
 import com.grzybek.grzybek.domain.Localization;
 import com.grzybek.grzybek.dto.LocalizationTO;
 import com.grzybek.grzybek.services.GrzybService;
@@ -74,4 +72,3 @@ public class LocalizationController {
         return "pages/localization";
     }
 }
->>>>>>> 2sprint
