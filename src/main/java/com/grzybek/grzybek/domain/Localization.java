@@ -1,5 +1,7 @@
 package com.grzybek.grzybek.domain;
 
+import lombok.*;
+import javax.persistence.*;
 
 @Entity
 @Getter
