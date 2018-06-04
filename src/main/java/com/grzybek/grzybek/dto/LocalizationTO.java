@@ -22,5 +22,4 @@ public class LocalizationTO {
     private Ecology ecology;
     private Integer adminMark;
     private Grzyb grzyb;
-
 }

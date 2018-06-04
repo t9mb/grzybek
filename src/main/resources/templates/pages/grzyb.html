@@ -10,7 +10,7 @@
         <div class="col-md-6">
             <div class="caption-full">
                 <h4 th:text="'Nazwa grzyba :' + ${grzyb.name}"></h4>
-                <h4 th:text="'Właściwości :' + ${grzyb.attribute}"></h4>
+                <h4 th:text="'Właściwości :' + ${grzyb.attribute.getDescription()}"></h4>
                 <p th:text="'Opis :' + ${grzyb.description}"></p>
             </div>
         </div>
