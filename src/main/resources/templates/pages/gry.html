@@ -1,0 +1,35 @@
+<html lang="pl" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout" th:with="title='Szczegóły grzyba'">
+<th:block layout:fragment="content">
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+</head>
+
+    <style>
+        canvas{
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+
+<body>
+
+
+<canvas id="snake" width="608" height="608"></canvas>
+
+<!--<script src="/resources/static.js/snake.js"></script> -->
+
+
+
+<script src="/resources/static/js/snake.js"></script>
+
+</body>
+<!--<script src="resources/static.js/snake.js"></script> -->
+
+</th:block>
+</html>
