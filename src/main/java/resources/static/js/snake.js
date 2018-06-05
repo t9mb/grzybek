@@ -7,10 +7,10 @@ const box = 32;
 // load images
 
 const ground = new Image();
-ground.src = "/images/ground.png";
+ground.src = "/resources/static/js/ground.jpg";
 
 const foodImg = new Image();
-foodImg.src = "/images/food.png";
+foodImg.src = "/food.png";
 // create the snake
 
 let snake = [];
@@ -39,18 +39,18 @@ document.addEventListener("keydown",direction);
 
 function direction(event){
     let key = event.keyCode;
-    if( key === 37 && d !== "RIGHT"){
-
+    if( key == 37 && d != "RIGHT"){
+        left.play();
         d = "LEFT";
     }else if(key == 38 && d != "DOWN"){
         d = "UP";
-
+        up.play();
     }else if(key == 39 && d != "LEFT"){
         d = "RIGHT";
-
+        right.play();
     }else if(key == 40 && d != "UP"){
         d = "DOWN";
-
+        down.play();
     }
 }
 
@@ -93,7 +93,7 @@ function draw(){
     // if the snake eats the food
     if(snakeX == food.x && snakeY == food.y){
         score++;
-
+        eat.play();
         food = {
             x : Math.floor(Math.random()*17+1) * box,
             y : Math.floor(Math.random()*15+3) * box
@@ -115,7 +115,7 @@ function draw(){
 
     if(snakeX < box || snakeX > 17 * box || snakeY < 3*box || snakeY > 17*box || collision(newHead,snake)){
         clearInterval(game);
-        
+        dead.play();
     }
 
     snake.unshift(newHead);
