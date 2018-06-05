@@ -119,7 +119,7 @@ function draw(){
         ctx.fillStyle = "red";
         ctx.font = "100px Changa one";
         ctx.fillText("Game over", box*2+10, box*10);
-        
+
     }
 
     snake.unshift(newHead);
