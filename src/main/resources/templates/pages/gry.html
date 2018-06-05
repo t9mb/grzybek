@@ -2,7 +2,7 @@
 <!--suppress HtmlUnknownTarget -->
 <html lang="pl" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorator="layout" th:with="title='Snake'">
+      layout:decorator="layout" th:with="title='Zabawa'">
 <th:block layout:fragment="content">
 
 
@@ -15,16 +15,19 @@
 
 <body>
 
-<div class="row">
+
 <canvas id="snake" width="608" height="608"></canvas>
 
 <!--<script src="/resources/static.js/snake.js"></script> -->
 
-
 <script th:src="@{/js/snake.js}"></script>
 
+<table class = "table">
+    <tbody >
+    <a  th:href="@{/zbieranie}" class="btn btn-primary" >Gra - Zbieranie grzybów </a>
+    </tbody >
+</table>
 
-</div>
 </body>
 <!--<script src="resources/static.js/snake.js"></script> -->
 
