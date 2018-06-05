@@ -2,8 +2,13 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorator="layout" th:with="title='Miejsce występowania grzybów '">
 <th:block layout:fragment="content">
+
+
+
     <form class="form-horizontal" method="post" th:action="@{/localization/create}" th:object="${localizationTO}"
           id='localizationForm'>
+
+         <body background="http://innezycie.com/wp-content/uploads/2016/08/IMG_8871.jpg">
         <div class="form-group row">
             <label for="grzybselect" class="col-lg-offset-3 col-lg-6">Grzyb</label>
             <div class="col-lg-offset-3 col-lg-6">
@@ -47,7 +52,8 @@
                 <button type="submit" class="btn btn-primary" id='sendRegisterForm'>Dodaj</button>
             </div>
         </div>
-
+</body>
     </form>
+
 </th:block>
 </html>
