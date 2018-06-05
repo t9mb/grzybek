@@ -46,7 +46,14 @@
                 </li>
 
                 <li><a th:href="@{/ciekawostki}" >Ciekawostki</a></li>
-                <li><a th:href="@{/gry}" >Zabawa</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Zabawa<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a th:href="@{/gry}" >Snake</a></li>
+                        <li><a th:href="@{/zbieranie}" >Zbieranie grzybów</a></li>
+                    </ul>
+                </li>
+
 
             </ul>
             <ul class="nav navbar-nav navbar-right" sec:authorize="!isAuthenticated()">
