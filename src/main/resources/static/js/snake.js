@@ -54,7 +54,7 @@ function direction(event){
     }
 }
 
-// cheack collision function
+// check collision function
 function collision(head,array){
     for(let i = 0; i < array.length; i++){
         if(head.x == array[i].x && head.y == array[i].y){
@@ -115,6 +115,10 @@ function draw(){
 
     if(snakeX < box || snakeX > 17 * box || snakeY < 3*box || snakeY > 17*box || collision(newHead,snake)){
         clearInterval(game);
+
+        ctx.fillStyle = "red";
+        ctx.font = "100px Changa one";
+        ctx.fillText("Game over", box*2+10, box*10);
         
     }
 
