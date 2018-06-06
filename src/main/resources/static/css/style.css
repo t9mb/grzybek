@@ -7935,3 +7935,127 @@ button.close {
         display: none !important;
     }
 }
+
+.BorowikSzatanski
+{
+    background: url("/resources/static/images/BorowikSzatanski.png") no-repeat;
+    cursor: pointer;
+
+}
+.koslarz
+{
+    background: url("/resources/static/images/koslarz.png") no-repeat;
+    cursor: pointer;
+}
+.BorowikSzlachetny
+{
+    background: url("/resources/static/images/BorowikSzlachetny.png") no-repeat;
+    cursor: pointer;
+}
+.BorowikSosnowy
+{
+    background: url("/resources/static/images/BorowikSosnowy.png") no-repeat;
+    cursor: pointer;
+}
+.GolabekWymiotny
+{
+    background: url("/resources/static/images/GolabekWymiotny.png") no-repeat;
+    cursor: pointer;
+}
+.GolabekBlotny
+{
+    background: url("/resources/static/images/GolabekBlotny.png") no-repeat;
+    cursor: pointer;
+}
+.MuchomorZielonawy
+{
+    background: url("/resources/static/images/BorowikSzatanski.png") no-repeat;
+    cursor: pointer;
+}
+.KozlarzCzerwony
+{
+    background: url("/resources/static/images/BorowikSzatanski.png") no-repeat;
+    cursor: pointer;
+}
+.PieczarkaDwuzarodnikowa
+{
+    background: url("/resources/static/images/BorowikSzatanski.png") no-repeat;
+    cursor: pointer;
+}
+.TwardnikJaponski
+{
+    background: url("/resources/static/images/BorowikSzatanski.png") no-repeat;
+    cursor: pointer;
+}
+.MuchomorPlanisty
+{
+    background: url("/resources/static/images/BorowikSzatanski.png") no-repeat;
+    cursor: pointer;
+}
+.HelmowkaObrzezona
+{
+    background: url("/resources/static/images/BorowikSzatanski.png") no-repeat;
+    cursor: pointer;
+}
+.StrzepiakCeglasty
+{
+    background: url("/resources/static/images/BorowikSzatanski.png") no-repeat;
+    cursor: pointer;
+}
+.LejkowkaJadowita
+{
+    background: url("/resources/static/images/BorowikSzatanski.png") no-repeat;
+    cursor: pointer;
+}
+.PieprznikJadalny
+{
+    background: url("/resources/static/images/BorowikSzatanski.png") no-repeat;
+    cursor: pointer;
+}
+.BoczniakMikolajkowy
+{
+    background: url("/resources/static/images/BorowikSzatanski.png") no-repeat;
+    cursor: pointer;
+}
+.z0
+{
+    background: url("/resources/static/images/z0.png") no-repeat;
+}
+.z1
+{
+    background: url("/resources/static/images/z1.png") no-repeat;
+}
+.z2
+{
+    background: url("/resources/static/images/z2.png") no-repeat;
+}
+
+#kontener
+{  margin:auto;
+    width: 685px;
+    height: 800px;
+}
+#Pole{
+
+    width: 685px;
+    border-spacing: 0px;
+
+}
+#timer
+{
+
+}
+#Pole td {
+    width: 94px;
+    height: 97px;
+}
+#board {
+    margin:auto;
+
+    width: 684px;
+    height: 682px;
+
+    text-align: center;
+
+    background-image: url("../../../java/resources/static/images/board.png");
+}

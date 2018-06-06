@@ -3,9 +3,8 @@
 <html lang="pl" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorator="layout" th:with="title='Zbieranie grzybów'">
-<th:block layout:fragment="content">
-
-    <style>
+<head>
+    <style type="text/css">
         #kontener
         {  margin:auto;
             width: 685px;
@@ -28,114 +27,65 @@
         #board {
             margin:auto;
 
-            width: 685px;
-            height: 800px;
+            width: 684px;
+            height: 682px;
 
             text-align: center;
 
-            background: url("/resources/static/images/board.png") no-repeat;
+            background-image: url("../../../java/resources/static/images/board.png");
         }
-        .BorowikSzatanski
-        {
-            background: url("/resources/static/images/BorowikSzatanski.png") no-repeat;
-            cursor: pointer;
 
-        }
-        .koslarz
-        {
-            background: url("/resources/static/images/koslarz.png") no-repeat;
-            cursor: pointer;
-        }
-        .BorowikSzlachetny
-        {
-            background: url("/resources/static/images/BorowikSzlachetny.png") no-repeat;
-            cursor: pointer;
-        }
-        .BorowikSosnowy
-        {
-            background: url("/resources/static/images/BorowikSosnowy.png") no-repeat;
-            cursor: pointer;
-        }
-        .GolabekWymiotny
-        {
-            background: url("/resources/static/images/GolabekWymiotny.png") no-repeat;
-            cursor: pointer;
-        }
-        .GolabekBlotny
-        {
-            background: url("/resources/static/images/GolabekBlotny.png") no-repeat;
-            cursor: pointer;
-        }
-        .MuchomorZielonawy
-        {
-            background: url("/resources/static/images/BorowikSzatanski.png") no-repeat;
-            cursor: pointer;
-        }
-        .KozlarzCzerwony
-        {
-            background: url("/resources/static/images/BorowikSzatanski.png") no-repeat;
-            cursor: pointer;
-        }
-        .PieczarkaDwuzarodnikowa
-        {
-            background: url("/resources/static/images/BorowikSzatanski.png") no-repeat;
-            cursor: pointer;
-        }
-        .TwardnikJaponski
-        {
-            background: url("/resources/static/images/BorowikSzatanski.png") no-repeat;
-            cursor: pointer;
-        }
-        .MuchomorPlanisty
-        {
-            background: url("/resources/static/images/BorowikSzatanski.png") no-repeat;
-            cursor: pointer;
-        }
-        .HelmowkaObrzezona
-        {
-            background: url("/resources/static/images/BorowikSzatanski.png") no-repeat;
-            cursor: pointer;
-        }
-        .StrzepiakCeglasty
-        {
-            background: url("/resources/static/images/BorowikSzatanski.png") no-repeat;
-            cursor: pointer;
-        }
-        .LejkowkaJadowita
-        {
-            background: url("/resources/static/images/BorowikSzatanski.png") no-repeat;
-            cursor: pointer;
-        }
-        .PieprznikJadalny
-        {
-            background: url("/resources/static/images/BorowikSzatanski.png") no-repeat;
-            cursor: pointer;
-        }
-        .BoczniakMikolajkowy
-        {
-            background: url("/resources/static/images/BorowikSzatanski.png") no-repeat;
-            cursor: pointer;
-        }
-        .z0
-        {
-            background: url("/resources/static/images/z0.png") no-repeat;
-        }
-        .z1
-        {
-            background: url("/resources/static/images/z1.png") no-repeat;
-        }
-        .z2
-        {
-            background: url("/resources/static/images/z2.png") no-repeat;
-        }
 
     </style>
+</head>
+<th:block layout:fragment="content">
 
     <body>
 
+    <div id="kontener">
+        <div id="timer">
+        </div>
+        <div id="board">
 
-        <script th:src="@{/js/grzybek.js}"></script>
 
+            <table id="Pole">
+                <tr>
+                    <td id="0"></td><td id="1"></td><td id="2"></td><td id="3">
+                </td><td id="4"></td> <td id="5"></td><td id="6"></td>
+                </tr>
+                <tr>
+                    <td id="7"></td><td id="8"></td><td id="9"></td><td id="10">
+                </td><td id="11"></td> <td id="12"></td><td id="13"></td>
+                </tr>
+                <tr>
+                    <td id="14"></td><td  id="15"></td><td id="16"></td><td id="17">
+                </td><td id="18"></td> <td id="19"></td><td id="20"></td>
+                </tr>
+                <tr>
+                    <td id="21"></td><td id="22"></td><td id="23"></td><td id="24">
+                </td><td id="25"></td> <td id="26"></td><td id="27"></td>
+                </tr>
+                <tr>
+                    <td id="28"></td><td  id="29"></td><td id="30"></td><td id="31">
+                </td><td id="32"></td> <td id="33"></td><td id="34"></td>
+                </tr>
+                <tr>
+                    <td id="35"></td><td id="36"></td><td id="37"></td><td id="38">
+                </td><td id="39"></td> <td id="40"></td><td id="41"></td>
+                </tr>
+                <tr>
+                    <td id="42"></td><td id="43"></td><td id="44"></td><td id="45">
+                </td><td id="46"></td> <td id="47"></td><td id="48"></td>
+                </tr>
+            </table>
+
+        </div>
+        <!--<button onclick="koniec()" type=button>Zakoncz</button> -->
+    </div>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script  th:src="@{/js/grzybek.js}"></script>
 
     </body>
 
