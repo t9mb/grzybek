@@ -6,36 +6,20 @@
 
 
 
-<th:block layout:fragment="content">
+
 
 
 
 
 
   <body background="http://s10.ifotos.pl/img/226850zie_qehrhew.jpg">
+  <th:block layout:fragment="content">
 
-
-  <div class="col-md-6">
+  <div class="limage">
     <img
-            src="https://zapodaj.net/images/32e6484b06eba.png" >
-
-
+            src="http://s2.ifotos.pl/img/grzyb3jpg_qehrsrh.jpg" >
     </img>
-  </div>
 
-
-
-
-  <div class ="row1">
-
-    <div class = "zegar">
-      <canvas id="clock">
-
-        <script src="/js/Vector.js"></script>
-
-        <script src="/js/clock.js"></script>
-      </canvas>
-    </div>
   </div>
 
 
@@ -43,15 +27,16 @@
 
 
 
+<div class ="zegar">
+          <canvas id="clock">
 
+            <script src="/js/Vector.js"></script>
 
+            <script src="/js/clock.js"></script>
+          </canvas>
+
+  </div>
+</th:block>
   </body>
 
-
-
-
-
-
-
-</th:block>
 </html>

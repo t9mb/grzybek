@@ -2,6 +2,8 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorator="layout" th:with="title='Aktualizacja danych lokalizacji'">
 <th:block layout:fragment="content">
+
+    <body background="http://s24.flog.pl/media/foto/12144262_gdy-mokro-jesienia-to-do-lasu-na-grzyby-najlepszy-czas.jpg">
     <form class="form-horizontal" method="post" th:action="@{/localization/edit/{id}(id = ${localization.id})}"
           th:object="${localization}" id='localizationForm'>
         <!--wprowadzenie dod. roznic w stos do addlocalization -->
@@ -47,7 +49,7 @@
                 <button type="submit" class="btn btn-primary" id='sendRegisterForm'>Dodaj</button>
             </div>
         </div>
-
+    </body>
     </form>
 </th:block>
 </html>

@@ -2,6 +2,7 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorator="layout" th:with="title='Szczegóły grzyba'">
 <th:block layout:fragment="content">
+    <body background="https://c.pxhere.com/photos/3f/6b/funnel_ling_mushroom_hexenring_late_autumn_mushroom_group_forest_mushrooms-1171776.jpg!d">
     <div class="row">
         <div class="col-md-6">
             <img class="img-responsive center" th:if="*{grzyb.image != null}"
@@ -15,5 +16,6 @@
             </div>
         </div>
     </div>
+    </body>
 </th:block>
 </html>

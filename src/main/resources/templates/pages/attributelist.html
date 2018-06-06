@@ -3,7 +3,7 @@
       layout:decorator="layout"
       th:with="title='Lista własciwości'">
 <th:block layout:fragment="content">
-
+<body background="https://ro.com.pl/wp-content/uploads/2017/03/las.jpg">
     <div th:if="${attributeList.size()}!=0" class="table-responsive">
         <table class="table">
             <thead>
@@ -26,5 +26,6 @@
     <div th:if="${attributeList.size()}==0" style="padding-top: 30px">
         <h1 id="actually0Users">Aktualnie brak własciwosci atrybutu</h1>
     </div>
+</body>
 </th:block>
 </html>

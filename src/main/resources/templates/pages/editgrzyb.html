@@ -2,6 +2,7 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorator="layout" th:with="title='Aktualizacja grzyba'">
 <th:block layout:fragment="content">
+    <body background="https://ro.com.pl/wp-content/uploads/2017/03/las.jpg">
     <form class="form-horizontal" method="post" th:action="@{/grzyb/edit/{id}(id = ${grzyb.id})}" th:object="${grzyb}"
           id='herbForm'>
         <div class="form-group row">
@@ -27,5 +28,6 @@
         </div>
     </form>
     </form>
+    </body>
 </th:block>
 </html>

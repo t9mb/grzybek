@@ -3,7 +3,7 @@
       layout:decorator="layout"
       th:with="title='Lista grzybów'">
 <th:block layout:fragment="content">
-
+<body background="https://www.mushroomtable.com/wild/images/poison_pie_1.jpg">
     <div th:if="${grzybList.size()}!=0" class="table-responsive">
         <table class="table">
             <thead>
@@ -30,5 +30,6 @@
     <div th:if="${grzybList.size()}==0" style="padding-top: 30px">
         <h1 id="actually0Users">Aktualnie brak dostępnych grzybów</h1>
     </div>
+</body>
 </th:block>
 </html>
