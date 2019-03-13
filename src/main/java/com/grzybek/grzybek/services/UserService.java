@@ -21,9 +21,7 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public void deleteUser(Integer id) {
-        userRepository.delete(id);
-    }
+    public void deleteUser(Integer id) { userRepository.delete(id); }
 
     public void createUser(UserTO userTO){
         User user = convertToUser(userTO);
@@ -41,6 +39,7 @@ public class UserService {
 
 
     public void updateUser(User user) { userRepository.saveAndFlush(user); }
+
     private User convertToUser(UserTO userTO){
         return User.builder().id(userTO.getId())
                 .adress(userTO.getAdress())

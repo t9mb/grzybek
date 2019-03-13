@@ -1,0 +1,35 @@
+<html lang="pl"  xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout"
+      th:with="title='Lista grzybów'">
+<th:block layout:fragment="content">
+<body background="https://www.mushroomtable.com/wild/images/poison_pie_1.jpg">
+    <div th:if="${grzybList.size()}!=0" class="table-responsive">
+        <table class="table">
+            <thead>
+            <tr>
+                <th></th>
+                <th>Id</th>
+                <th>Nazwa</th>
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody >
+            <tr th:each="grzyb: ${grzybList}">
+                <td th:text="${grzyb.id}"></td>
+                <td th:text="${grzyb.name}"></td>
+                <td><a th:href="@{/grzyb/show/{id}(id = ${grzyb.id})}"
+                       class="btn btn-primary" >Szczegóły </a></td>
+                <td><a th:href="@{/grzyb/delete/{id}(id = ${grzyb.id})}"
+                       class="btn btn-danger" >USUŃ </a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div >
+    <div th:if="${grzybList.size()}==0" style="padding-top: 30px">
+        <h1 id="actually0Users">Aktualnie brak dostępnych grzybów</h1>
+    </div>
+</body>
+</th:block>
+</html>

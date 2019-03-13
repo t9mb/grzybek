@@ -2,10 +2,41 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorator="layout"
       th:with="title='Strona główna'">
-<th:block layout:fragment="content">
-    <div class="jumbotron">
-        <h1 th:text="${nameapp}"/>
-        <p th:text="${deskriptionapp}"/>
-    </div>
+
+
+
+
+
+
+
+
+
+
+  <body background="http://s10.ifotos.pl/img/226850zie_qehrhew.jpg">
+  <th:block layout:fragment="content">
+
+  <div class="limage">
+    <img
+            src="http://s2.ifotos.pl/img/grzyb3jpg_qehrsrh.jpg" >
+    </img>
+
+  </div>
+
+
+
+
+
+
+<div class ="zegar">
+          <canvas id="clock">
+
+            <script src="/js/Vector.js"></script>
+
+            <script src="/js/clock.js"></script>
+          </canvas>
+
+  </div>
 </th:block>
+  </body>
+
 </html>

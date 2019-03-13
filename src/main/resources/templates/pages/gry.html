@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--suppress HtmlUnknownTarget -->
+<html lang="pl" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout" th:with="title='Zabawa'">
+<th:block layout:fragment="content">
+
+
+
+    <style>
+        canvas{
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+
+<body background="http://www.poznan.lasy.gov.pl/documents/688373/23055668/KP+1.jpg/73af35ac-2d7a-43ed-8e45-46ebceec1523?t=1498041238780">
+
+
+<canvas id="snake" width="608" height="608"></canvas>
+
+<!--<script src="/resources/static.js/snake.js"></script> -->
+
+<script th:src="@{/js/snake.js}"></script>
+
+<!--<table class = "table">
+    <tbody >
+    <a  th:href="@{/zbieranie}" class="btn btn-primary" >Gra - Zbieranie grzybów </a>
+    </tbody >
+</table>  -->
+
+</body>
+<!--<script src="resources/static.js/snake.js"></script> -->
+
+</th:block>
+</html>

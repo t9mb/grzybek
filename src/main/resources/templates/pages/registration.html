@@ -2,6 +2,7 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorator="layout" th:with="title='Rejestracja użytkownika'">
 <th:block layout:fragment="content">
+    <body background="https://www.tapeciarnia.pl/tapety/normalne/tapeta-marynowane-grzyby-w-sloikach-obok-prawdziwkow-na-desce.jpg">
     <form class="form-horizontal" method="post" th:action="@{/user/registration}" th:object="${userTO}" id='registerForm' enctype="multipart/form-data">
         <div class="form-group row">
             <label for="name-input" class="col-lg-offset-3 col-lg-6">Imie</label>
@@ -64,5 +65,6 @@
             </div>
         </div>
     </form>
+    </body>
 </th:block>
 </html>

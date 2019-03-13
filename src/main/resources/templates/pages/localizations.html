@@ -1,0 +1,41 @@
+<html lang="pl"  xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+      layout:decorator="layout"
+      th:with="title='Lista lokalizacji'">
+<th:block layout:fragment="content">
+<body background="https://d.wpimg.pl/1846154520--1408155714/grzybobranie.jpg"></body>
+    <div th:if="${localizationList.size()}!=0" class="table-responsive">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Współrzędne Północne</th>
+                <th>Współrzędne Wschodnie</th>
+                <th>Srodowisko</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody >
+            <tr th:each="localization: ${localizationList}">
+                <td th:text="${localization.id}"></td>
+                <td th:text="${localization.localizationNorth}"></td>
+                <td th:text="${localization.localizationEast}"></td>
+                <td th:text="${localization.ecology}"></td>
+                <td><a th:href="@{/localization/show/{id}(id = ${localization.id})}"
+                       class="btn btn-primary" >Szczegóły </a></td>
+                <!--<td><a th:href="@{/localization/edit/{id}(id = ${localization.id})}"
+                       class="btn btn-success" >EDYTUJ </a></td> -->
+                <td><a th:href="@{/localization/delete/{id}(id = ${localization.id})}"
+                       class="btn btn-danger" >USUŃ </a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div >
+    <div th:if="${localizationList.size()}==0" style="padding-top: 30px">
+        <h1 id="actually0Users">Aktualnie brak dostępnych lokalizacji</h1>
+    </div>
+
+</th:block>
+>>>>>>> 2sprint
+</html>
